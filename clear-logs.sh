@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $PWD
+cd /home/ubuntu/mobile-scripts
 
 if ! test -e log
 then
