@@ -1,0 +1,2 @@
+sudo /opt/liferay/tomcat-7.0.42/bin/startup.sh
+sudo /opt/liferay/tomcat-7.0.42/bin/shutdown.sh
