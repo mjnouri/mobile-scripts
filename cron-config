@@ -1,8 +1,8 @@
 #mobile1
-0 20 * * TUE ubuntu /home/ubuntu/mobile-scripts/clear-logs.sh
+0 22 * * TUE ubuntu /home/ubuntu/mobile-scripts/clear-logs.sh
 
 #mobile2
-0 20 * * WED ubuntu /home/ubuntu/mobile-scripts/clear-logs.sh
+0 22 * * WED ubuntu /home/ubuntu/mobile-scripts/clear-logs.sh
 
 #mobile3
-0 20 * * THU ubuntu /home/ubuntu/mobile-scripts/clear-logs.sh
+0 22 * * THU ubuntu /home/ubuntu/mobile-scripts/clear-logs.sh
