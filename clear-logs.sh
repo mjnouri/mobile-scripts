@@ -25,6 +25,13 @@ echo "Stopping Liferay. Wait 1 minute." | tee -a log
 sudo /opt/liferay/tomcat-7.0.42/bin/shutdown.sh
 sleep 60
 
+# Copy logs to S3
+DATETIMES3=$(date +%F"_"%T"_"%A)
+echo "Copying Liferay logs to s3://bucketname/$DATETIMES3"
+aws s3 cp /opt/liferay/tomcat-7.0.42/logs/ s3://bucketname/$DATETIMES3/dir1 --recursive --quiet
+aws s3 cp /opt/liferay/tomcat-7.0.42/bin/C\:/liferay_tomcat/liferay-portal-6.2.0-ce-ga1/logs/ s3://bucketname/$DATETIMES3/dir2 --recursive --quiet
+echo "Done. Logs copied to s3://bucketname/$DATETIMES3" | tee -a log-s3
+
 echo "Clearing dir1." | tee -a log
 sudo rm -f /opt/liferay/tomcat-7.0.42/logs/*
 
